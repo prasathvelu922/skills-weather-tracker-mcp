@@ -21,6 +21,30 @@ In this exercise, you will:
 3. Have the agent **build a CLI**, then open a pull request.
 4. Add a **web dashboard**, **verify** the data through MCP, and **merge**.
 
+## Weather CLI
+
+The CLI stores current Open-Meteo readings in the existing `weather.db` database.
+Install dependencies with `npm install`, then run commands from the repository root:
+
+```sh
+node src/cli.js add "London"
+node src/cli.js add "Tokyo"
+node src/cli.js list
+node src/cli.js list --limit 5
+node src/cli.js stats "London"
+```
+
+Equivalent npm scripts are available:
+
+```sh
+npm run add -- "London"
+npm run list -- --limit 5
+npm run stats -- "London"
+```
+
+An unrecognized city or an unavailable Open-Meteo service is reported as a
+friendly error without a stack trace.
+
 ### What you'll end up with
 
 ```

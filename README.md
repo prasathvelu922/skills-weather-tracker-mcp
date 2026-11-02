@@ -45,6 +45,19 @@ npm run stats -- "London"
 An unrecognized city or an unavailable Open-Meteo service is reported as a
 friendly error without a stack trace.
 
+## Web dashboard
+
+Start the dashboard from the repository root:
+
+```sh
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) to add or refresh cities,
+view recent weather logs and per-city temperature summaries, and chart recent
+temperature readings. The dashboard uses the same Open-Meteo weather service
+and SQLite database as the CLI.
+
 ### What you'll end up with
 
 ```
